@@ -34,8 +34,8 @@ export const Nav = () => {
     >
       <div>
       <span>
-            FlowAI
-          </span>
+        <b>FlowAI</b>
+      </span>
       </div>
       <div className={"ml-auto flex items-center gap-1"}>
         <Button
