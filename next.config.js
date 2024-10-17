@@ -3,15 +3,11 @@ module.exports = {
       return [
         {
           // Apply these headers to all routes (pages, API routes, etc.)
-          source: '/(.*)',  // This applies to all routes in your app
+          source: '/(.*)', // Apply globally
           headers: [
             {
               key: 'Access-Control-Allow-Origin',
-              value: (req) => {
-                const allowedOrigins = ['http://localhost:5173'];
-                const origin = req.headers.get('origin');
-                return allowedOrigins.includes(origin) ? origin : allowedOrigins[0]; // Fallback to https://example.com if origin is not allowed
-              },
+              value: 'http://localhost:5173', // Allow multiple origins
             },
             {
               key: 'Access-Control-Allow-Methods',
